@@ -4,9 +4,11 @@ import Rating from 'react-rating-stars-component';
 
 const Filter = ({ onFilterChange }) => {
 
+    // Ratings and title states
     const [searchTitle, setSearchTitle] = React.useState("");
     const [searchRating, setSearchRating] = React.useState(0);
 
+    // Handle rating and set filter property
     const handleSearchRatingChange = (value) => {
         setSearchRating(value);
         onFilterChange({
@@ -15,6 +17,7 @@ const Filter = ({ onFilterChange }) => {
         });
     };
 
+    // Handle title and set filter property
     const handleSearchTitleChange = (event) => {
         const newTitle = event.target.value;
         setSearchTitle(newTitle);
@@ -28,7 +31,6 @@ const Filter = ({ onFilterChange }) => {
     // console.log(searchTitle, searchRating);
 
     return (
-
         <div className='p-4'>
             {/* <Card.Body> */}
             <Form>

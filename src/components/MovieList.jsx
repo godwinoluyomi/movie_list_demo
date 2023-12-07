@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import MovieCard from './MovieCard';
 // import movies from '../movies';
 
+// Movie list to map to cards
 const MovieList = ({ movieList }) => {
     return (
         <Container>

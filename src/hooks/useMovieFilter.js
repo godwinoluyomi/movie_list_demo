@@ -3,6 +3,7 @@ import React from "react";
 function useMovieFilter(movies, filter) {
   const [filteredMovies, setFilteredMovies] = React.useState(movies);
 
+  // Filter movie when movies or filter changes and return filteredMovies array
   React.useEffect(() => {
     const titleFilter = filter.title ? filter.title.toLowerCase() : "";
     const ratingFilter = filter.rating ? parseInt(filter.rating) : 0;

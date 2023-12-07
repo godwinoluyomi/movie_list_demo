@@ -11,20 +11,23 @@ import movies from './movies';
 import useMovieFilter from './hooks/useMovieFilter';
 
 function App() {
-
+  // Movielist and filter states
   const [movieList, setMovieList] = React.useState(movies);
   const [filter, setFilter] = React.useState({});
 
+  // Add new movie function
   const handleAddMovie = (newMovie) => {
     setMovieList([newMovie, ...movieList]);
     // setMovieList([...movieList, newMovie]);
   };
 
+  // Set filter function
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
     console.log(newFilter);
   }
 
+  // Filter movie hook
   const filteredMovies = useMovieFilter(movieList, filter);
 
   // console.log(movieList);

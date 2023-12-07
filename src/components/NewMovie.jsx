@@ -6,6 +6,7 @@ import movies from '../movies';
 
 const NewMovie = ({ onAddMovie }) => {
 
+    // Movies property states
     const [title, setTitle] = React.useState("");
     const [description, setDescription] = React.useState("");
     const [postalUrl, setPostalUrl] = React.useState("");
@@ -32,6 +33,7 @@ const NewMovie = ({ onAddMovie }) => {
         // Log the updated movies array
         // console.log(movies);
 
+        // Reset field
         setTitle('');
         setDescription('');
         setPostalUrl('');

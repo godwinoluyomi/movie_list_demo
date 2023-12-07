@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Rating from 'react-rating-stars-component';
 
+// Render each movie in card
 const MovieCard = ({ id, title, description, postalUrl, rating }) => {
 
     return (
