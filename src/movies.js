@@ -6,6 +6,7 @@ let movies = [
       "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
     postalUrl:
       "https://m.media-amazon.com/images/I/61-vQDr7ecL._AC_UF1000,1000_QL80_.jpg",
+    trailerUrl: "https://www.youtube.com/embed/NmzuHjWmXOc",
     rating: 4,
   },
   {
@@ -15,6 +16,7 @@ let movies = [
       "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
     postalUrl:
       "https://play-lh.googleusercontent.com/ZucjGxDqQ-cHIN-8YA1HgZx7dFhXkfnz73SrdRPmOOHEax08sngqZMR_jMKq0sZuv5P7-T2Z2aHJ1uGQiys",
+    trailerUrl: "https://www.youtube.com/watch?v=UaVTIH8mujA",
     rating: 3,
   },
   {
@@ -24,6 +26,7 @@ let movies = [
       "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
     postalUrl:
       "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_FMjpg_UX1000_.jpg",
+    trailerUrl: "https://www.youtube.com/watch?v=EXeTwQWrcwY",
     rating: 5,
   },
   {
@@ -33,6 +36,7 @@ let movies = [
       "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
     postalUrl:
       "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg",
+    trailerUrl: "https://www.youtube.com/watch?v=YoHD9XEInc0",
     rating: 4,
   },
   {
@@ -42,6 +46,7 @@ let movies = [
       "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
     postalUrl:
       "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+    trailerUrl: "https://www.youtube.com/watch?v=9ix7TUGVYIo",
     rating: 5,
   },
   /* {

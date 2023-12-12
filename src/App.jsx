@@ -9,6 +9,11 @@ import Filter from './components/Filter';
 import MovieList from './components/MovieList';
 import movies from './movies';
 import useMovieFilter from './hooks/useMovieFilter';
+import { Route, Routes } from 'react-router-dom';
+import SingleMovie from './components/SingleMovie';
+import NotFound from './components/NotFound';
+import SingleMovieWrapper from './components/SingleMovieWrapper';
+
 
 function App() {
   // Movielist and filter states
@@ -34,21 +39,34 @@ function App() {
 
   return (
     <>
-      <NavBar />
+      <Routes>
+        <Route path='/' element={<NavBar />}>
+          <Route index element={<div>
+            <Container>
+              <Row>
+                <Col md={4}> <NewMovie onAddMovie={handleAddMovie} /> </Col>
+                <Col md={8}>
+                  <Row>
+                    <Col md={12}> <Filter onFilterChange={handleFilterChange} /> </Col>
+                  </Row>
+                  <Row>
+                    <Col md={12}> <MovieList movieList={filteredMovies} /> </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+          } />
 
-      <Container>
-        <Row>
-          <Col md={4}> <NewMovie onAddMovie={handleAddMovie} /> </Col>
-          <Col md={8}>
-            <Row>
-              <Col md={12}> <Filter onFilterChange={handleFilterChange} /> </Col>
-            </Row>
-            <Row>
-              <Col md={12}> <MovieList movieList={filteredMovies} /> </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Container>
+          <Route path='/movie/:movieid' element={<SingleMovieWrapper movieList={movieList} />}></Route>
+
+          {/* <Route path='/movie/:movieid' element={<SingleMovie movieList={filteredMovies} />}></Route> */}
+
+          {/* 404 route - should be the last one */}
+          <Route path='*' element={<NotFound />}></Route>
+        </Route>
+
+      </Routes>
 
     </>
   )

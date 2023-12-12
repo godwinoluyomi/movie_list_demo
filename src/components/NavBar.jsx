@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import { Outlet } from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -16,6 +17,8 @@ const NavBar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
+            <Outlet />
         </>
     )
 }

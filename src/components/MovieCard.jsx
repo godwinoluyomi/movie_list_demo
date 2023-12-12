@@ -1,7 +1,7 @@
 import React from 'react'
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+import { Col, Card, Button } from 'react-bootstrap';
 import Rating from 'react-rating-stars-component';
+import { Link } from 'react-router-dom';
 
 // Render each movie in card
 const MovieCard = ({ id, title, description, postalUrl, rating }) => {
@@ -21,10 +21,12 @@ const MovieCard = ({ id, title, description, postalUrl, rating }) => {
                         activeColor="#ffd700"
                         edit={false}
                     />
+                    <Link to={`movie/${id}`}>
+                        <Button variant="outline-primary"> Watch Trailer </Button></Link>
                     <Card.Text>{description ? (description.length > 50 ? description.slice(0, 50) + '...' : description) : '...'}</Card.Text>
                 </Card.Body>
             </Card>
-        </Col>
+        </Col >
     )
 }
 

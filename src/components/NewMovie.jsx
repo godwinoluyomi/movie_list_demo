@@ -10,6 +10,7 @@ const NewMovie = ({ onAddMovie }) => {
     const [title, setTitle] = React.useState("");
     const [description, setDescription] = React.useState("");
     const [postalUrl, setPostalUrl] = React.useState("");
+    const [trailerUrl, setTrailerUrl] = React.useState("");
     const [rating, setRating] = React.useState(0);
 
 
@@ -25,6 +26,7 @@ const NewMovie = ({ onAddMovie }) => {
             title: title,
             description: description,
             postalUrl: postalUrl,
+            trailerUrl: trailerUrl,
             rating: rating,
         };
         // movies.push(newMovie);
@@ -37,6 +39,7 @@ const NewMovie = ({ onAddMovie }) => {
         setTitle('');
         setDescription('');
         setPostalUrl('');
+        setTrailerUrl('');
         setRating(0);
     };
 
@@ -61,6 +64,10 @@ const NewMovie = ({ onAddMovie }) => {
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label> Poster URL </Form.Label>
                             <Form.Control type="url" placeholder="" value={postalUrl} onChange={(event) => setPostalUrl(event.target.value)} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label> Trailer URL </Form.Label>
+                            <Form.Control type="url" placeholder="Youtube Link" value={trailerUrl} onChange={(event) => setTrailerUrl(event.target.value)} />
                         </Form.Group>
 
                         <Form.Group controlId="rating">
